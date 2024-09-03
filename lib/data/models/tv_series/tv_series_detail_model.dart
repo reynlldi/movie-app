@@ -5,6 +5,7 @@ import 'package:equatable/equatable.dart';
 
 class TvSeriesDetailResponse extends Equatable {
   const TvSeriesDetailResponse({
+    required this.adult,
     required this.backdropPath,
     required this.firstAirDate,
     required this.genres,
@@ -30,6 +31,7 @@ class TvSeriesDetailResponse extends Equatable {
     required this.voteCount,
   });
 
+  final bool adult;
   final String? backdropPath;
   final String firstAirDate;
   final List<GenreModel> genres;
@@ -56,6 +58,7 @@ class TvSeriesDetailResponse extends Equatable {
 
   factory TvSeriesDetailResponse.fromJson(Map<String, dynamic> json) =>
       TvSeriesDetailResponse(
+        adult: json["adult"],
         backdropPath: json["backdrop_path"],
         firstAirDate: json["first_air_date"],
         genres: List<GenreModel>.from(
@@ -84,6 +87,7 @@ class TvSeriesDetailResponse extends Equatable {
       );
 
   Map<String, dynamic> toJson() => {
+        "adult": adult,
         "backdrop_path": backdropPath,
         "first_air_date": firstAirDate,
         "genres": List<GenreModel>.from(genres.map((x) => x.toJson())),
@@ -111,26 +115,30 @@ class TvSeriesDetailResponse extends Equatable {
 
   TvSeriesDetail toEntity() {
     return TvSeriesDetail(
-        backdropPath: backdropPath,
-        firstAirDate: firstAirDate,
-        genres: genres.map((genre) => genre.toEntity()).toList(),
-        id: id,
-        lastAirDate: lastAirDate,
-        name: name,
-        numberOfEpisodes: numberOfEpisodes,
-        numberOfSeasons: numberOfSeasons,
-        overview: overview,
-        posterPath: posterPath,
-        seasons: seasons.map((season) => season.toEntity()).toList(),
-        status: status,
-        tagline: tagline,
-        type: type,
-        voteAverage: voteAverage,
-        voteCount: voteCount);
+      adult: adult,
+      backdropPath: backdropPath,
+      firstAirDate: firstAirDate,
+      genres: genres.map((genre) => genre.toEntity()).toList(),
+      id: id,
+      lastAirDate: lastAirDate,
+      name: name,
+      numberOfEpisodes: numberOfEpisodes,
+      numberOfSeasons: numberOfSeasons,
+      overview: overview,
+      posterPath: posterPath,
+      seasons: seasons.map((season) => season.toEntity()).toList(),
+      status: status,
+      tagline: tagline,
+      type: type,
+      voteAverage: voteAverage,
+      voteCount: voteCount,
+      languages: languages,
+    );
   }
 
   @override
   List<Object?> get props => [
+        adult,
         backdropPath,
         firstAirDate,
         genres,
@@ -154,5 +162,6 @@ class TvSeriesDetailResponse extends Equatable {
         type,
         voteAverage,
         voteCount,
+        languages,
       ];
 }

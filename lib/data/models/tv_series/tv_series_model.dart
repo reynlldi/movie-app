@@ -3,6 +3,7 @@ import 'package:equatable/equatable.dart';
 
 class TvSeriesModel extends Equatable {
   const TvSeriesModel({
+    required this.adult,
     required this.posterPath,
     required this.popularity,
     required this.id,
@@ -18,6 +19,7 @@ class TvSeriesModel extends Equatable {
     required this.originalName,
   });
 
+  final bool adult;
   final String? posterPath;
   final double popularity;
   final int id;
@@ -33,6 +35,7 @@ class TvSeriesModel extends Equatable {
   final String originalName;
 
   factory TvSeriesModel.fromJson(Map<String, dynamic> json) => TvSeriesModel(
+        adult: json["adult"],
         posterPath: json["poster_path"],
         popularity: json["popularity"].toDouble(),
         id: json["id"],
@@ -49,6 +52,7 @@ class TvSeriesModel extends Equatable {
       );
 
   Map<String, dynamic> toJson() => {
+        "adult": adult,
         "poster_path": posterPath,
         "popularity": popularity,
         "id": id,
@@ -66,6 +70,7 @@ class TvSeriesModel extends Equatable {
 
   TvSeries toEntity() {
     return TvSeries(
+      adult: adult,
       posterPath: posterPath,
       popularity: popularity,
       id: id,
@@ -84,6 +89,7 @@ class TvSeriesModel extends Equatable {
 
   @override
   List<Object?> get props => [
+        adult,
         posterPath,
         popularity,
         id,

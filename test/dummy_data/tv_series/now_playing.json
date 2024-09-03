@@ -1,0 +1,23 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/mu3lEhGovyhKHPJzb7HNYtZUCDT.jpg",
+            "genre_ids": [10766],
+            "id": 206559,
+            "origin_country": ["ZA"],
+            "original_language": "af",
+            "original_name": "Binnelanders",
+            "overview": "A South African Afrikaans soap opera. It is set in and around the fictional private hospital, Binneland Kliniek, in Pretoria, and the storyline follows the trials, trauma and tribulations of the staff and patients of the hospital.",
+            "popularity": 3978.961,
+            "poster_path": "/v9nGSRx5lFz6KEgfmgHJMSgaARC.jpg",
+            "first_air_date": "2005-10-13",
+            "name": "Binnelanders",
+            "vote_average": 5.632,
+            "vote_count": 73
+        }
+    ],
+    "total_results": 1758,
+    "total_pages": 88
+}

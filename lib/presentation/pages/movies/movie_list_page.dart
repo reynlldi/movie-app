@@ -9,6 +9,7 @@ import 'package:ditonton/presentation/pages/movies/search_movies_page.dart';
 import 'package:ditonton/presentation/pages/movies/top_rated_movies_page.dart';
 import 'package:ditonton/presentation/provider/movies/movie_list_notifier.dart';
 import 'package:ditonton/presentation/widgets/movie_carousel.dart';
+import 'package:ditonton/presentation/widgets/shimmer_carousel.dart';
 import 'package:ditonton/presentation/widgets/shimmer_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -63,17 +64,7 @@ class _MovieListPageState extends State<MovieListPage> {
                 builder: (context, data, child) {
                   final state = data.upcomingMoviesState;
                   if (state == RequestState.loading) {
-                    return SizedBox(
-                      width: 300,
-                      height: 300,
-                      child: Shimmer.fromColors(
-                        baseColor: Colors.grey.withOpacity(0.3),
-                        highlightColor: Colors.grey.withOpacity(0.1),
-                        child: Container(
-                          color: Colors.white,
-                        ),
-                      ),
-                    );
+                    return const ShimmerCarousel();
                   } else if (state == RequestState.loaded) {
                     return MovieCarousel(data.upcomingMovies);
                   } else {

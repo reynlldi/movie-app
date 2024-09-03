@@ -1,0 +1,24 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "backdrop_path": "/yWVqYVOUcS6vu22v4BPXKJW10m5.jpg",
+            "id": 206679,
+            "name": "Na lovu",
+            "original_name": "Na lovu",
+            "overview": "Na Lovu is a Czech game-show, based on the license of the popular global format The Chase. A heart-racing quiz show where four competitors must pit their wits and face off against Lovec (the Chaser), a ruthless quiz genius determined to stop them from winning cash prizes.",
+            "poster_path": "/udJ1wVuOwFg1q6UBcQGwcpcdIYF.jpg",
+            "media_type": "tv",
+            "adult": false,
+            "original_language": "cs",
+            "genre_ids": [10764, 10751],
+            "popularity": 1149.267,
+            "first_air_date": "2021-08-16",
+            "vote_average": 5.9,
+            "vote_count": 8,
+            "origin_country": ["CZ"]
+        }
+    ],
+    "total_results": 40,
+    "total_pages": 2
+}

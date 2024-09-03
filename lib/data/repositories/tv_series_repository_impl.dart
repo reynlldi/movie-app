@@ -34,7 +34,7 @@ class TvSeriesRepositoryImpl implements TvSeriesRepository {
   @override
   Future<Either<Failure, List<TvSeries>>> getPopularTvSeries() async {
     try {
-      final result = await tvSeriesRemoteDataSource.getTopRatedTvSeries();
+      final result = await tvSeriesRemoteDataSource.getPopularTvSeries();
       return Right(result.map((model) => model.toEntity()).toList());
     } on ServerException {
       return Left(ServerFailure(""));
@@ -46,7 +46,7 @@ class TvSeriesRepositoryImpl implements TvSeriesRepository {
   @override
   Future<Either<Failure, List<TvSeries>>> getTopRatedTvSeries() async {
     try {
-      final result = await tvSeriesRemoteDataSource.getPopularTvSeries();
+      final result = await tvSeriesRemoteDataSource.getTopRatedTvSeries();
       return Right(result.map((model) => model.toEntity()).toList());
     } on ServerException {
       return Left(ServerFailure(""));

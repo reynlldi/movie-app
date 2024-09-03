@@ -186,6 +186,14 @@ class DetailContentTvSeries extends StatelessWidget {
                             ),
                             const SizedBox(height: 16),
                             Text(
+                              'Language',
+                              style: kHeading6,
+                            ),
+                            Text(
+                              _showLanguage(tvSeries.languages),
+                            ),
+                            const SizedBox(height: 16),
+                            Text(
                               'seasons',
                               style: kHeading6,
                             ),
@@ -361,5 +369,12 @@ class DetailContentTvSeries extends StatelessWidget {
     }
 
     return result.substring(0, result.length - 2);
+  }
+
+  String _showLanguage(List<String> languages) {
+    if (languages.isEmpty) {
+      return 'No languages available';
+    }
+    return languages.join(', ');
   }
 }

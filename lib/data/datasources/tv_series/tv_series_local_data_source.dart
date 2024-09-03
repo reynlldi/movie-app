@@ -16,7 +16,7 @@ class TvSeriesLocalDataSourceImpl implements TvSeriesLocalDataSource {
 
   @override
   Future<TvSeriesTable?> getTvSeriesByid(int id) async {
-    final result = await databaseHelper.getMovieById(id);
+    final result = await databaseHelper.getTvSeriesByid(id);
     if (result != null) {
       return TvSeriesTable.fromMap(result);
     } else {
