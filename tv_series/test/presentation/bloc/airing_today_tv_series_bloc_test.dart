@@ -53,6 +53,7 @@ void main() {
       return airingTodayTvSeriesBloc;
     },
     act: (bloc) => bloc.add(FetchAiringTodayTvSeries()),
+    wait: const Duration(milliseconds: 100),
     expect: () => [
       AiringTodayTvSeriesLoading(),
       AiringTodayTvSeriesHasData(tTvSeriesList),
@@ -70,6 +71,7 @@ void main() {
       return airingTodayTvSeriesBloc;
     },
     act: (bloc) => bloc.add(FetchAiringTodayTvSeries()),
+    wait: const Duration(milliseconds: 100),
     expect: () => [
       AiringTodayTvSeriesLoading(),
       AiringTodayTvSeriesEmpty(),
