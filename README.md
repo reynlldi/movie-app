@@ -1,4 +1,4 @@
-[![Codemagic build status](https://api.codemagic.io/apps/66dd44f77df0ad33d0a52361/66dd44f77df0ad33d0a52360/status_badge.svg)](https://codemagic.io/app/66dd44f77df0ad33d0a52361/66dd44f77df0ad33d0a52360/latest_build)
+[![Codemagic build status](https://api.codemagic.io/apps/66e30fa571c3097ff5293a3b/66e30fa571c3097ff5293a3a/status_badge.svg)](https://codemagic.io/app/66e30fa571c3097ff5293a3b/66e30fa571c3097ff5293a3a/latest_build)
 
 # Submission flutter expert project
 
